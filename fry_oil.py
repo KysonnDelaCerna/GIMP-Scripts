@@ -4,7 +4,7 @@ from gimpfu import *
 import math
 
 def fry_oil(img, layer) :
-    gimp.progress_init("Aberrating chromas on " + layer.name + "...")
+    gimp.progress_init("Frying oiling " + layer.name + "...")
     pdb.gimp_image_undo_group_start(img)
     pos = pdb.gimp_image_get_layer_position(img, layer)
     magenta = pdb.gimp_layer_copy(layer, True)
