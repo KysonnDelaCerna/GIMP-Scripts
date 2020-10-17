@@ -3,7 +3,7 @@
 from gimpfu import *
 import math
 
-def deep_fry(img, layer, mx, my, cx, cy) :
+def chromatic_aberration(img, layer, mx, my, cx, cy) :
     gimp.progress_init("Aberrating chromas on " + layer.name + "...")
     pdb.gimp_image_undo_group_start(img)
     pos = pdb.gimp_image_get_layer_position(img, layer)
@@ -38,6 +38,6 @@ register(
         (PF_SLIDER, "cy", "CY Offset", 0.01, (-1, 1, 0.01)),
     ],
     [],
-    deep_fry)
+    chromatic_aberration)
 
 main()
